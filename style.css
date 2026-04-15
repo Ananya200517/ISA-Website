@@ -245,14 +245,14 @@ section { padding: 6rem 4rem; max-width: 1200px; margin: 0 auto; }
 
 .holi-feature {
   position: relative;
-  background: #ffffff;
+  background: linear-gradient(135deg, #2b0000, #5a0000, #1a0000);
   border-radius: 28px;
-  padding: 0.5rem 0.5rem;   /* reduced height */
+  padding: 1.5rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
   overflow: hidden;
-  border: 1px solid rgba(155,89,182,.15);
-  box-shadow: 0 15px 40px rgba(26,20,100,.08);
+  border: 1px solid rgba(255,215,0,.2);
+  box-shadow: 0 20px 60px rgba(0,0,0,.4);
 }
 
 /* Floating Powder Base */
@@ -267,7 +267,7 @@ section { padding: 6rem 4rem; max-width: 1200px; margin: 0 auto; }
 .powder-1 {
   width: 220px;
   height: 220px;
-  background: #ff6ec7;
+  background: #ff3c3c;
   top: -60px;
   left: -40px;
 }
@@ -275,7 +275,7 @@ section { padding: 6rem 4rem; max-width: 1200px; margin: 0 auto; }
 .powder-2 {
   width: 260px;
   height: 260px;
-  background: #7afcff;
+  background: #ffd700;
   bottom: -80px;
   right: -60px;
   animation-delay: 2s;
@@ -284,7 +284,7 @@ section { padding: 6rem 4rem; max-width: 1200px; margin: 0 auto; }
 .powder-3 {
   width: 180px;
   height: 180px;
-  background: #ffd166;
+  background: #ff8c42;
   top: 40%;
   left: 60%;
   animation-delay: 4s;
@@ -293,7 +293,7 @@ section { padding: 6rem 4rem; max-width: 1200px; margin: 0 auto; }
 .powder-4 {
   width: 200px;
   height: 200px;
-  background: #80ed99;
+  background: #b30000;
   bottom: 20%;
   left: 20%;
   animation-delay: 6s;
@@ -302,6 +302,14 @@ section { padding: 6rem 4rem; max-width: 1200px; margin: 0 auto; }
 @keyframes floatPowder {
   0%,100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-30px) scale(1.08); }
+}
+
+.holi-feature::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255,0,0,.15), transparent 60%);
+  pointer-events: none;
 }
 
 .holi-content {
@@ -347,27 +355,28 @@ section { padding: 6rem 4rem; max-width: 1200px; margin: 0 auto; }
 
 .holi-badge {
   display: inline-block;
-  background: white;
-  color: #9b59b6;
+  background: rgba(255,215,0,.1);
+  color: #ffd700;
   font-weight: 700;
   font-size: .7rem;
   letter-spacing: .1em;
   text-transform: uppercase;
   padding: .4rem 1rem;
   border-radius: 40px;
+  border: 1px solid rgba(255,215,0,.3);
   margin-bottom: 1rem;
 }
 
 .holi-details h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.9rem;
-  color: var(--navy);
+  color: #ffd700;
 }
 
 .holi-details p {
   margin-top: .6rem;
   max-width: 520px;
-  color: #555;
+  color: rgba(255,255,255,.85);
   line-height: 1.6;
 }
 
@@ -379,21 +388,25 @@ section { padding: 6rem 4rem; max-width: 1200px; margin: 0 auto; }
   font-size: .9rem;
 }
 
+.holi-meta span {
+  color: rgba(255,255,255,.8);
+}
+
 .holi-btn {
   display: inline-block;
   margin-top: 1.5rem;
-  background: var(--navy);
-  color: #fff;
+  background: linear-gradient(135deg, #ffd700, #ffb300);
+  color: #1a0000;
   padding: .75rem 1.8rem;
   border-radius: 50px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   transition: transform .2s, background .2s;
 }
 
 .holi-btn:hover {
-  background: var(--saffron);
-  transform: translateY(-3px);
+  background: linear-gradient(135deg, #ffb300, #ffd700);
+  transform: translateY(-3px) scale(1.03);
 }
 
 /* Responsive */
